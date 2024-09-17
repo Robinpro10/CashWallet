@@ -13,6 +13,27 @@
         android:theme="@style/Theme.CashWallet"
         tools:targetApi="31">
         <activity
+            android:name=".DepositarHome"
+            android:exported="false" />
+        <activity
+            android:name=".Seguridad"
+            android:exported="false" />
+        <activity
+            android:name=".DatosPersonales"
+            android:exported="false" />
+        <activity
+            android:name=".Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".IniciarSesion"
+            android:exported="false" />
+        <activity
+            android:name=".Registro"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
