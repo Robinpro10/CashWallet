@@ -6,8 +6,6 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,6 +52,13 @@ class Home : AppCompatActivity() {
             val intent = Intent(this, DepositarHome::class.java)
             startActivity(intent)
         }
-
+        // Capturar el evento del clic del boton btnCuenta
+        btnCuenta.setOnClickListener()
+        {
+            val intent = Intent(this, CajasHome::class.java).apply {
+                putExtra("usuario", usuario) // Enviar el objeto Usuario
+            }
+            startActivity(intent)
+        }
     }
 }

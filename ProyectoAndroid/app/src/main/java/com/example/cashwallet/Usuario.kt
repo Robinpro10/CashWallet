@@ -9,7 +9,7 @@ data class Usuario(
     var nombre: String,
     val fechaNacimiento: String,
     var contraseña: String,
-    val saldo: String,
+    var saldo: Double,
     var pin: String,
     var telefono: String,
     var ingresos: String,
@@ -20,7 +20,7 @@ data class Usuario(
         parcel.readString() ?: "",
         parcel.readString() ?: "",
         parcel.readString() ?: "",
-        parcel.readString() ?: "",
+        parcel.readDouble(),
         parcel.readString() ?: "",
         parcel.readString() ?: "",
         parcel.readString() ?: "",
@@ -32,7 +32,7 @@ data class Usuario(
         parcel.writeString(nombre)
         parcel.writeString(fechaNacimiento)
         parcel.writeString(contraseña)
-        parcel.writeString(saldo)
+        parcel.writeDouble(saldo)
         parcel.writeString(pin)
         parcel.writeString(telefono)
         parcel.writeString(ingresos)

@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                 "Juan Pérez",  // Nombre
                 "01/01/1990",  // Fecha de nacimiento
                 "password123", // Contraseña
-                "1000",        // Saldo
+                1000.00, //saldo
                 "1234",        // Pin
                 "3001234567",  // Teléfono
                 "2000",        // Ingresos
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 "Ana García",  // Nombre
                 "02/02/1985",  // Fecha de nacimiento
                 "ana2023",     // Contraseña
-                "500",         // Saldo
+                50.0,      // Saldo
                 "4321",        // Pin
                 "3109876543",  // Teléfono
                 "2500",        // Ingresos

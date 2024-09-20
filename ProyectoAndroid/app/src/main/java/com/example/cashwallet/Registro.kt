@@ -39,6 +39,7 @@ class Registro : AppCompatActivity() {
 
         // Capturar el evento del clic del boton btnContinuarRegistro
         btnContinuarRegistro.setOnClickListener() {
+                val saldo = txtSaldo.text.toString().toDoubleOrNull() ?: 0.0
 
                 // Crear un nuevo objeto Usuario con los datos ingresados
                 val nuevoUsuario = Usuario(
@@ -46,7 +47,7 @@ class Registro : AppCompatActivity() {
                     txtNombre.text.toString(),
                     txtFachaNacimiento.text.toString(),
                     txtContraseña.text.toString(),
-                    txtSaldo.text.toString(),
+                    saldo,
                     txtPin.text.toString(),
                     txtTelefono.text.toString(),
                     txtIngresos.text.toString(),

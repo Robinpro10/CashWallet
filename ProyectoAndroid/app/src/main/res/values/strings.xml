@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">CashWallet</string>
-    <string name ="size_button_back">28dp</string>
+    <string name="size_button_back">28dp</string>
 </resources>

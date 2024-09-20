@@ -80,8 +80,8 @@
 
     <ImageButton
         android:id="@+id/btnCuenta"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginTop="108dp"
         android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"

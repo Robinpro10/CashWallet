@@ -33,14 +33,16 @@ class DepositarHome : AppCompatActivity() {
         btnDepositarD.setOnClickListener()
         {
             val deposito = txtDepositar.text.toString().toDoubleOrNull()  // Convertir a número
-            if (deposito != null && deposito > 0) {
-                val intent = Intent(this, Home::class.java)  // Cambiar el nombre de la Activity si es necesario
+            if (txtDepositar.text.isEmpty()) {
+                txtResultado.text = "El campo de depósito no puede estar vacío"
+            } else if (deposito != null && deposito > 0) {
+                val intent = Intent(this, DatosPSE::class.java).apply {
+                    putExtra("usuario", usuario) // Enviar el objeto Usuario
+                    putExtra("deposito", deposito)  // Enviar depósito
+                }
                 startActivity(intent)
-            }
-            else
-            {
-                // monto menor a 0
-                txtResultado.text = "El doposito debe ser mayor a 0.0"
+            } else {
+                txtResultado.text = "El depósito debe ser mayor a 0.0"
                 txtDepositar.text.clear()
             }
         }
