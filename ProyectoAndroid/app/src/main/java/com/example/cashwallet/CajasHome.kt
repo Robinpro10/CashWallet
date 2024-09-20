@@ -29,37 +29,24 @@ class CajasHome : AppCompatActivity() {
         val btnRetirarC = findViewById<Button>(R.id.btnRetirarC)
 
 
+        val usuario: Usuario? = intent.getParcelableExtra<Usuario>("usuario")
+        /*val SaldoCajaT = intent.getStringExtra("saldoCajaT")
+        val SaldoC = intent.getStringExtra("saldoC")*/
+        val bundle = intent.extras
+
+        var SaldoCajaT = bundle?.getDouble("saldoCajaT") ?: 0.0
+        var SaldoC = bundle?.getDouble("saldoC") ?: 0.0
+
+        if(SaldoCajaT != null  && SaldoC != null)
+        {
+            lblSaldoCajaT.text = "$ $SaldoCajaT"
+            lblsaldoC.text = "$ $SaldoC"
+        }
+
+
         // Inicialmente ocultamos los botones
         btnDepositarCaja.visibility = View.GONE
         btnRetirarC.visibility = View.GONE
-
-    // Inicializar los valores de las etiquetas en 0
-        lblSaldoCajaT.text = "0"
-        lblrendimientoT.text = "0"
-        lblsaldoC.text = "0"
-        lblrendimientoC.text = "0"
-
-        // Aquí puedes incrementar los valores según el depósito
-        val SaldoCajaT = lblSaldoCajaT.text.toString().toDouble()// Simula un depósito
-        val RendimientoT = lblrendimientoT.text.toString().toDouble() // Simula rendimiento
-        val SaldoC = lblsaldoC.text.toString().toDouble()  // Simula actualización de saldo
-        val RendimientoC = lblrendimientoC.text.toString().toDouble()  // Simula rendimiento
-
-        // Actualizar las etiquetas con los nuevos valores
-        lblSaldoCajaT.text = SaldoCajaT.toString()
-        lblrendimientoT.text = RendimientoT.toString()
-        lblsaldoC.text = SaldoC.toString()
-        lblrendimientoC.text = RendimientoC.toString()
-
-
-
-        val usuario: Usuario? = intent.getParcelableExtra<Usuario>("usuario")
-        val bundle = intent.extras
-        //SaldoCajaT = bundle?.getDouble("saldoCajaT") ?: 0.0
-        lblSaldoCajaT.text= SaldoCajaT.toString()
-        //SaldoC = bundle?.getDouble("saldoC") ?: 0.0
-        lblsaldoC.text= SaldoCajaT.toString()
-
 
         if (usuario != null) {
             // Aquí puedes usar los atributos del usuario

@@ -43,7 +43,7 @@ class RetiroCaja : AppCompatActivity() {
                     usuario.saldo -= deposito
                     SaldoCajaT += deposito
                     SaldoC += deposito
-                    val intent = Intent(this, DatosPSE::class.java).apply {
+                    val intent = Intent(this, CajasHome::class.java).apply {
                         putExtra("usuario", usuario) // Enviar el objeto Usuario
                         putExtra("saldoCajaT", SaldoCajaT)
                         putExtra("saldoC", SaldoC)
